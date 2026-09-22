@@ -9,29 +9,17 @@
 
 ### 1. Quy tắc đặt tên và Kiểu dữ liệu
 * **Khóa chính (PK):** Sử dụng `UUID` tự động sinh bằng `uuid_generate_v4()`.
-* **Khóa ngoại (FK):** Tham chiếu đến khóa chính tương ứng, thiết lập ràng buộc xóa (`ON DELETE SET NULL` hoặc `ON DELETE CASCADE`) để đảm bảo tính toàn vẹn dữ liệu.
+* **Khóa ngoại (FK):** Tham chiếu đến khóa chính tương ứng, thiết lập ràng buộc xóa (`ON DELETE SET NULL` hoặc `ON DELETE CASCADE`).
 * **Thời gian (Timestamp):** Toàn bộ trường chứa mốc thời gian dùng `TIMESTAMP WITH TIME ZONE` (`TIMESTAMPTZ`) để hỗ trợ đa múi giờ. Tất cả các bảng chính đều có trigger tự động cập nhật trường `updated_at`.
-* **Xử lý chuỗi & Vị trí:** Sử dụng `VARCHAR` / `TEXT` chuẩn UTF-8, cột tọa độ địa lý sử dụng hệ tọa độ WGS84 (`GEOMETRY(Point, 4326)`).
+* **Phân quyền người dùng:** Được lưu trực tiếp dưới dạng cột `role_code` trong bảng `system_user` với ràng buộc CHECK (`MANAGER`, `RECEIVING_STAFF`, `PROCESSING_STAFF`, `DISPATCH_STAFF`, `DRIVER`).
 
 ---
 
 ## II. CHI TIẾT CÁC BẢNG DỮ LIỆU (DATABASE TABLES)
 
-### 1. Nhóm Bảng Tài khoản & Phân quyền (Users & Roles)
+### 1. Nhóm Bảng Tài khoản người dùng
 
-#### 1.1. Bảng `role` (Danh mục Vai trò)
-* **Mô tả:** Quản lý các nhóm quyền truy cập trong hệ thống.
-* **Cấu trúc:**
-
-| Tên trường | Kiểu dữ liệu | Ràng buộc | Mô tả |
-| :--- | :--- | :--- | :--- |
-| `role_code` | VARCHAR(30) | **PK**, NOT NULL | Mã vai trò (`MANAGER`, `DRIVER`,...) |
-| `role_name` | VARCHAR(100) | NOT NULL | Tên hiển thị của vai trò |
-| `description` | TEXT | NULL | Mô tả chi tiết vai trò |
-| `created_at` | TIMESTAMPTZ | DEFAULT `now()` | Thời gian tạo |
-| `updated_at` | TIMESTAMPTZ | DEFAULT `now()` | Thời gian cập nhật gần nhất |
-
-#### 1.2. Bảng `system_user` (Người dùng Hệ thống)
+#### 1.1. Bảng `system_user` (Người dùng Hệ thống)
 * **Mô tả:** Lưu trữ tài khoản đăng nhập và thông tin cá nhân của người dùng.
 * **Cấu trúc:**
 
@@ -41,7 +29,7 @@
 | `username` | VARCHAR(50) | **UNIQUE**, NOT NULL | Tên đăng nhập |
 | `password_hash` | VARCHAR(255) | NOT NULL | Mật khẩu đã mã hóa |
 | `full_name` | VARCHAR(100) | NOT NULL | Họ và tên |
-| `role_code` | VARCHAR(30) | **FK** (`role.role_code`), NOT NULL | Mã vai trò |
+| `role_code` | VARCHAR(30) | NOT NULL, CHECK | Mã vai trò (`MANAGER`, `RECEIVING_STAFF`, `PROCESSING_STAFF`, `DISPATCH_STAFF`, `DRIVER`) |
 | `phone` | VARCHAR(20) | NULL | Số điện thoại |
 | `status` | VARCHAR(20) | CHECK (`active`, `locked`), DEFAULT `'active'` | Trạng thái tài khoản |
 | `created_at` | TIMESTAMPTZ | DEFAULT `now()` | Thời gian tạo |
@@ -224,17 +212,3 @@
 | `created_by` | UUID | **FK** (`system_user.user_id`), NULL | Người chốt báo cáo |
 | `created_at` | TIMESTAMPTZ | DEFAULT `now()` | Thời gian lập |
 | `updated_at` | TIMESTAMPTZ | DEFAULT `now()` | Thời gian cập nhật |
-
----
-
-## III. SƠ ĐỒ MỐI QUAN HỆ CƠ BẢN (RELATIONSHIPS)
-
-1. **`role` $\rightarrow$ `system_user`** (1 - N): Một vai trò gán cho nhiều người dùng.
-2. **`system_user` $\rightarrow$ `driver`** (1 - 1): Một người dùng có thể liên kết tương ứng 1 hồ sơ tài xế.
-3. **`driver` $\rightarrow$ `vehicle`** (1 - 1): Mỗi tài xế phụ trách cố định 1 phương tiện.
-4. **`farmer` / `goods` $\rightarrow$ `intake`** (1 - N): Một nông dân/loại hàng có thể có nhiều đợt tiếp nhận.
-5. **`intake` $\rightarrow$ `lot`** (1 - 1): Mỗi phiếu tiếp nhận ứng với duy nhất 1 mã lô QR để phục vụ truy xuất.
-6. **`lot` $\rightarrow$ `processing`** (1 - N): Một lô hàng có thể trải qua một hoặc nhiều công đoạn sơ chế.
-7. **`processing` $\rightarrow$ `waybill`** (1 - N): Kết quả sơ chế tạo tiền đề cho các chuyến vận chuyển.
-8. **`waybill` $\rightarrow$ `shipment_tracking`** (1 - N): Một vận đơn có nhiều bản ghi lịch trình di chuyển.
-9. **`waybill` $\rightarrow$ `delivery_confirmation`** (1 - 1): Mỗi vận đơn chỉ có duy nhất 1 xác nhận bàn giao thành công.

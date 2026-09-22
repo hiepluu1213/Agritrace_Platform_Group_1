@@ -13,47 +13,22 @@ END;
 $$ LANGUAGE plpgsql;
 
 -- =========================================================
--- 0. DANH MỤC VAI TRÒ
--- =========================================================
-CREATE TABLE role (
-    role_code   VARCHAR(30) PRIMARY KEY,
-    role_name   VARCHAR(100) NOT NULL,
-    description TEXT,
-    created_at  TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    updated_at  TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-);
-
-COMMENT ON TABLE role IS 'Danh mục vai trò người dùng trong hệ thống';
-
-CREATE TRIGGER set_updated_at_role
-    BEFORE UPDATE ON role
-    FOR EACH ROW EXECUTE FUNCTION trg_set_updated_at();
-
-INSERT INTO role (role_code, role_name, description) VALUES
-    ('MANAGER',          'Quản lý',              'Theo dõi lô hàng, xem thống kê báo cáo'),
-    ('RECEIVING_STAFF',  'Nhân viên tiếp nhận',   'Tiếp nhận hàng hóa, quản lý thông tin nông dân'),
-    ('PROCESSING_STAFF', 'Nhân viên sơ chế',      'Thực hiện sơ chế hàng hóa'),
-    ('DISPATCH_STAFF',   'Nhân viên điều phối',   'Quản lý tài xế, xe, vận đơn'),
-    ('DRIVER',           'Tài xế',                'Nhận lệnh vận chuyển, cập nhật trạng thái, xác nhận giao hàng');
-
--- =========================================================
 -- 1. TÀI KHOẢN & PHÂN QUYỀN
 -- =========================================================
 CREATE TABLE system_user (
     user_id       UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    username      VARCHAR(50) NOT NULL,
+    username      VARCHAR(50) NOT NULL UNIQUE,
     password_hash VARCHAR(255) NOT NULL,
     full_name     VARCHAR(100) NOT NULL,
-    role_code     VARCHAR(30) NOT NULL REFERENCES role(role_code),
+    role_code     VARCHAR(30) NOT NULL CHECK (role_code IN ('MANAGER', 'RECEIVING_STAFF', 'PROCESSING_STAFF', 'DISPATCH_STAFF', 'DRIVER')),
     phone         VARCHAR(20),
     status        VARCHAR(20) NOT NULL DEFAULT 'active' CHECK (status IN ('active', 'locked')),
     created_at    TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    updated_at    TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-
-    CONSTRAINT uq_system_user_username UNIQUE (username)
+    updated_at    TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
 COMMENT ON TABLE system_user IS 'Người dùng hệ thống (Tài khoản đăng nhập)';
+COMMENT ON COLUMN system_user.role_code IS 'Vai trò: MANAGER | RECEIVING_STAFF | PROCESSING_STAFF | DISPATCH_STAFF | DRIVER';
 COMMENT ON COLUMN system_user.status IS 'Trạng thái tài khoản: active | locked';
 
 CREATE INDEX idx_system_user_role ON system_user(role_code);
