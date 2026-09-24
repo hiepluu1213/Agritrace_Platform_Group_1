@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lệnh Chế biến & Theo dõi Hao hụt | Nông Sản 360</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+  <div class="app-shell">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand-wrapper">
+        <div class="brand-logo">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">Nông Sản 360</span>
+          <span class="brand-tagline">VẬN HÀNH CHUỖI</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="../index.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+            <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+          </svg>
+          <span>Tổng quan</span>
+        </a>
+
+        <a href="che-bien.html" class="nav-link active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+          </svg>
+          <span>Lệnh chế biến</span>
+        </a>
+
+        <a href="gop-tach-lo.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 3 21 3 21 8"></polyline>
+            <line x1="4" y1="20" x2="21" y2="3"></line>
+            <polyline points="21 16 21 21 16 21"></polyline>
+            <line x1="15" y1="15" x2="21" y2="21"></line>
+            <line x1="4" y1="4" x2="9" y2="9"></line>
+          </svg>
+          <span>Gộp & Tách lô</span>
+        </a>
+
+        <a href="dieu-phoi.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Điều phối vận chuyển</span>
+        </a>
+
+        <a href="chuoi-lanh.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path>
+          </svg>
+          <span>Theo dõi chuỗi lạnh</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="system-status-card">
+          <div class="status-indicator">
+            <span class="status-dot"></span>
+            <span>Hệ thống ổn định</span>
+          </div>
+          <div class="status-time">Đồng bộ lúc 10:42 • 24/7</div>
+        </div>
+
+        <a href="../login.html" class="sidebar-logout-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span>Đăng xuất</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-wrapper">
+      <header class="top-header">
+        <div class="header-title-group">
+          <h1>Lệnh Chế biến & Theo dõi Hao hụt</h1>
+          <p>Quản lý quy trình, sản lượng và hiệu suất chế biến</p>
+        </div>
+
+        <div class="header-actions">
+          <div class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" class="search-input" placeholder="Tìm mã lô, chuyến xe...">
+          </div>
+
+          <button class="icon-button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="notification-badge-dot"></span>
+          </button>
+
+          <div class="user-profile-badge">
+            <div class="user-avatar-circle">NV</div>
+            <span class="user-profile-name">Nguyễn Văn Minh</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="page-content">
+        <!-- 4 KPI CARDS -->
+        <section class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-label">Lệnh đang chạy</span>
+              <div class="kpi-icon-pill kpi-icon-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value">14</div>
+            <div class="kpi-trend"><span>3 lệnh sắp hoàn tất</span></div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-label">Nguyên liệu hôm nay</span>
+              <div class="kpi-icon-pill kpi-icon-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value">86,4 tấn</div>
+            <div class="kpi-trend"><span>Từ 18 lô đầu vào</span></div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-label">Yield Rate trung bình</span>
+              <div class="kpi-icon-pill kpi-icon-teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value">93,2%</div>
+            <div class="kpi-trend"><span class="trend-up">↑ 1,2%</span> <span>so với tháng trước</span></div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-label">Hao hụt ghi nhận</span>
+              <div class="kpi-icon-pill kpi-icon-amber">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 3v18"></path>
+                  <rect x="4" y="8" width="16" height="8" rx="2"></rect>
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value">5,87 tấn</div>
+            <div class="kpi-trend"><span>Trong định mức 7,0%</span></div>
+          </div>
+        </section>
+
+        <!-- ACTIVE ORDER FOCUS BANNER (IMAGE 2) -->
+        <section class="order-focus-card">
+          <div class="order-main-info">
+            <div>
+              <div class="order-headline">
+                <span class="order-code-tag">LCB-260920-008</span>
+                <span class="status-badge badge-green">ĐANG CHẠY • 62%</span>
+              </div>
+              <h2 class="order-name">Sấy & phân loại cà phê Robusta</h2>
+              <p class="order-meta-text">Nhà máy Buôn Ma Thuột • Ca 1: 06:00–14:00</p>
+            </div>
+
+            <!-- 4 Step Process Timeline -->
+            <div class="steps-timeline-row">
+              <!-- Step 1 -->
+              <div class="step-card step-completed">
+                <div class="step-icon-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <div class="step-title">1. Rửa</div>
+                <div class="step-status">Hoàn tất</div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="step-card step-active">
+                <div class="step-icon-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M2 12h20M2 17h20M2 7h20"></path>
+                  </svg>
+                </div>
+                <div class="step-title">2. Sấy</div>
+                <div class="step-status">Đang chạy</div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="step-card step-pending">
+                <div class="step-icon-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="12" x2="14" y2="12"></line>
+                    <line x1="4" y1="18" x2="8" y2="18"></line>
+                  </svg>
+                </div>
+                <div class="step-title">3. Phân loại</div>
+                <div class="step-status">Chờ</div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="step-card step-pending">
+                <div class="step-icon-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  </svg>
+                </div>
+                <div class="step-title">4. Đóng gói</div>
+                <div class="step-status">Chờ</div>
+              </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div>
+              <div class="order-progress-track">
+                <div class="order-progress-bar" style="width: 62%;"></div>
+              </div>
+              <div class="order-time-row">
+                <span>Bắt đầu 06:15</span>
+                <span>Hoàn tất 13:40 • còn 2 giờ 18 phút</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Yield Balance Panel -->
+          <div class="yield-balance-panel">
+            <div class="yield-panel-title">
+              <span>Cân bằng sản lượng</span>
+              <span class="yield-subtext">Tự động cập nhật</span>
+            </div>
+
+            <div class="yield-stat-box yield-box-in">
+              <span class="yield-stat-label">Nguyên liệu đầu vào</span>
+              <div class="yield-stat-val">12.500 kg</div>
+              <span class="yield-stat-sub">LO-CFE-0926-041 • Độ ẩm 13,8%</span>
+            </div>
+
+            <div class="yield-stat-box yield-box-out">
+              <span class="yield-stat-label">Thành phẩm</span>
+              <div class="yield-stat-val">11.600 kg</div>
+            </div>
+
+            <div class="yield-stat-box yield-box-loss">
+              <span class="yield-stat-label">Phế / Phụ phẩm</span>
+              <div class="yield-stat-val">900 kg</div>
+            </div>
+
+            <div class="yield-metrics-summary">
+              <div>
+                <span class="yield-stat-label">Yield Rate</span>
+                <div class="metric-num-highlight">92,8%</div>
+              </div>
+              <div>
+                <span class="yield-stat-label">Tỷ lệ hao hụt</span>
+                <div class="metric-num-loss">7,2%</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TABLE LỆNH CHẾ BIẾN ĐANG CHẠY -->
+        <section class="content-card">
+          <div class="table-section-header">
+            <div>
+              <h2 class="card-title">Lệnh chế biến đang chạy</h2>
+            </div>
+
+            <div class="table-action-group">
+              <span class="table-count-text">14 lệnh tại 4 nhà máy</span>
+              <button class="btn-secondary">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                </svg>
+                <span>Bộ lọc</span>
+              </button>
+              <button class="btn-primary">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <span>Tạo lệnh chế biến</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Mã lệnh / Sản phẩm</th>
+                  <th style="width: 32%;">Tiến độ công đoạn</th>
+                  <th>Đầu vào</th>
+                  <th>Thành phẩm</th>
+                  <th>Tỷ lệ hao hụt</th>
+                  <th>Giám sát</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="table-code-cell">
+                      <span class="item-code">LCB-260920-008</span>
+                      <span class="item-subname">Cà phê Robusta</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                      <span style="font-size: 0.8rem; font-weight: 600;">Sấy • 62%</span>
+                      <div class="order-progress-track" style="margin: 0; height: 6px;">
+                        <div class="order-progress-bar" style="width: 62%; background-color: #107548;"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>12.500 kg</td>
+                  <td>11.600 kg</td>
+                  <td><span class="status-badge badge-green">7,2%</span></td>
+                  <td>Trần Quốc Dũng</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="table-code-cell">
+                      <span class="item-code">LCB-260920-011</span>
+                      <span class="item-subname">Xoài Cát Chu</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                      <span style="font-size: 0.8rem; font-weight: 600;">Rửa • 28%</span>
+                      <div class="order-progress-track" style="margin: 0; height: 6px;">
+                        <div class="order-progress-bar" style="width: 28%; background-color: #2563eb;"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>8.200 kg</td>
+                  <td>— —</td>
+                  <td><span class="status-badge badge-blue">—</span></td>
+                  <td>Trần Quốc Dũng</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="table-code-cell">
+                      <span class="item-code">LCB-260920-005</span>
+                      <span class="item-subname">Hồ tiêu đen</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                      <span style="font-size: 0.8rem; font-weight: 600;">Đóng gói • 91%</span>
+                      <div class="order-progress-track" style="margin: 0; height: 6px;">
+                        <div class="order-progress-bar" style="width: 91%; background-color: #d97706;"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>6.700 kg</td>
+                  <td>6.310 kg</td>
+                  <td><span class="status-badge badge-amber">5,8%</span></td>
+                  <td>Trần Quốc Dũng</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="table-code-cell">
+                      <span class="item-code">LCB-260920-013</span>
+                      <span class="item-subname">Sầu riêng Ri6</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                      <span style="font-size: 0.8rem; font-weight: 600;">Phân loại • 48%</span>
+                      <div class="order-progress-track" style="margin: 0; height: 6px;">
+                        <div class="order-progress-bar" style="width: 48%; background-color: #107548;"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>4.850 kg</td>
+                  <td>—</td>
+                  <td><span class="status-badge badge-green">—</span></td>
+                  <td>Trần Quốc Dũng</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+
+# --- Bien moi truong / bi mat ---
+.env
+.env.local
+
+# --- Node / Frontend (neu dung npm sau nay) ---
+node_modules/
+dist/
+build/
+
+# --- IDE ---
+.vscode/*
+!.vscode/settings.json
+.idea/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Log / DB local ---
+*.log
+*.sqlite3
+*.db

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gộp & Tách Lô | Nông Sản 360</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-wrapper">
+        <div class="brand-logo">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">Nông Sản 360</span>
+          <span class="brand-tagline">VẬN HÀNH CHUỖI</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="../index.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+            <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+          </svg>
+          <span>Tổng quan</span>
+        </a>
+
+        <a href="che-bien.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+          </svg>
+          <span>Lệnh chế biến</span>
+        </a>
+
+        <a href="gop-tach-lo.html" class="nav-link active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 3 21 3 21 8"></polyline>
+            <line x1="4" y1="20" x2="21" y2="3"></line>
+            <polyline points="21 16 21 21 16 21"></polyline>
+            <line x1="15" y1="15" x2="21" y2="21"></line>
+            <line x1="4" y1="4" x2="9" y2="9"></line>
+          </svg>
+          <span>Gộp & Tách lô</span>
+        </a>
+
+        <a href="dieu-phoi.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Điều phối vận chuyển</span>
+        </a>
+
+        <a href="chuoi-lanh.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path>
+          </svg>
+          <span>Theo dõi chuỗi lạnh</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="system-status-card">
+          <div class="status-indicator">
+            <span class="status-dot"></span>
+            <span>Hệ thống ổn định</span>
+          </div>
+          <div class="status-time">Đồng bộ lúc 10:42 • 24/7</div>
+        </div>
+
+        <a href="../login.html" class="sidebar-logout-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span>Đăng xuất</span>
+        </a>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="top-header">
+        <div class="header-title-group">
+          <h1>Gộp & Tách Lô</h1>
+          <p>Chuẩn hóa phẩm cấp, cân bằng khối lượng và truy xuất nguồn gốc</p>
+        </div>
+
+        <div class="header-actions">
+          <div class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" class="search-input" placeholder="Tìm mã lô, chuyến xe...">
+          </div>
+
+          <button class="icon-button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="notification-badge-dot"></span>
+          </button>
+
+          <div class="user-profile-badge">
+            <div class="user-avatar-circle">NV</div>
+            <span class="user-profile-name">Nguyễn Văn Minh</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="page-content">
+        <!-- ACTION TOOLBAR -->
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div class="filter-pills-group">
+            <button class="filter-pill active">Tách lô</button>
+            <button class="filter-pill">Gộp lô</button>
+          </div>
+
+          <div class="table-action-group">
+            <button class="btn-secondary">Lịch sử thao tác</button>
+            <button class="btn-primary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+              <span>Tạo phiếu mới</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 2 SPLIT GRIDS -->
+        <div class="batch-split-grid">
+          <!-- CARD TRÁI: TÁCH LÔ THEO PHẨM CẤP -->
+          <div class="batch-box-wrapper">
+            <div class="card-title-row" style="margin-bottom: 0;">
+              <div>
+                <h2 class="card-title">Tách lô theo phẩm cấp</h2>
+                <span style="font-size: 0.8rem; color: var(--text-secondary);">Phân tách theo A / B / C hoặc kích thước</span>
+              </div>
+              <button class="icon-button" style="width: 32px; height: 32px;" title="Chuyển đổi">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 3 21 3 21 8"></polyline>
+                  <line x1="4" y1="20" x2="21" y2="3"></line>
+                  <polyline points="21 16 21 21 16 21"></polyline>
+                  <line x1="15" y1="15" x2="21" y2="21"></line>
+                </svg>
+              </button>
+            </div>
+
+            <div class="source-batch-banner">
+              <div>
+                <span class="kpi-label">Lô nguồn đã chọn</span>
+                <div class="source-code">LO-MNG-0926-027</div>
+                <div class="source-meta">Xoài Cát Chu • Hộ Phạm Thị Hoa, Cao Lãnh</div>
+              </div>
+              <div class="source-total-weight">8.200 kg</div>
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.84rem;">
+                <strong>Phương án tách</strong>
+                <span style="color: var(--text-muted);">Theo phẩm cấp • 3 lô con</span>
+              </div>
+
+              <!-- Lô con A -->
+              <div class="plan-item-bar">
+                <div class="plan-item-header">
+                  <div>
+                    <span style="font-weight: 700;">LO-MNG-027-A</span>
+                    <span style="font-size: 0.78rem; color: var(--text-secondary); margin-left: 6px;">Phẩm cấp A • ≥ 450g</span>
+                  </div>
+                  <span class="plan-weight-bold">3.280 kg • 40%</span>
+                </div>
+                <div class="custom-progress">
+                  <div class="progress-fill-green" style="width: 40%; height: 100%;"></div>
+                </div>
+              </div>
+
+              <!-- Lô con B -->
+              <div class="plan-item-bar">
+                <div class="plan-item-header">
+                  <div>
+                    <span style="font-weight: 700;">LO-MNG-027-B</span>
+                    <span style="font-size: 0.78rem; color: var(--text-secondary); margin-left: 6px;">Phẩm cấp B • 300–449g</span>
+                  </div>
+                  <span class="plan-weight-bold">3.690 kg • 45%</span>
+                </div>
+                <div class="custom-progress">
+                  <div class="progress-fill-orange" style="width: 45%; height: 100%;"></div>
+                </div>
+              </div>
+
+              <!-- Lô con C -->
+              <div class="plan-item-bar">
+                <div class="plan-item-header">
+                  <div>
+                    <span style="font-weight: 700;">LO-MNG-027-C</span>
+                    <span style="font-size: 0.78rem; color: var(--text-secondary); margin-left: 6px;">Phẩm cấp C • < 300g</span>
+                  </div>
+                  <span class="plan-weight-bold">1.230 kg • 15%</span>
+                </div>
+                <div class="custom-progress">
+                  <div class="progress-fill-blue" style="width: 15%; height: 100%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cân bằng khối lượng Alert -->
+            <div class="balance-check-alert">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Cân bằng khối lượng: <strong>8.200 = 3.280 + 3.690 + 1.230 kg</strong></span>
+            </div>
+
+            <button class="btn-primary" style="align-self: flex-start; padding: 10px 24px;">Xác nhận tách lô</button>
+          </div>
+
+          <!-- CARD PHẢI: GỘP LÔ ĐỒNG NHẤT -->
+          <div class="batch-box-wrapper">
+            <div class="card-title-row" style="margin-bottom: 0;">
+              <div>
+                <h2 class="card-title">Gộp lô đồng nhất</h2>
+                <span style="font-size: 0.8rem; color: var(--text-secondary);">Tạo lô xuất khẩu, giữ toàn bộ truy xuất</span>
+              </div>
+              <button class="icon-button" style="width: 32px; height: 32px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 3 21 3 21 8"></polyline>
+                  <line x1="4" y1="20" x2="21" y2="3"></line>
+                </svg>
+              </button>
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.84rem;">
+                <strong>Các lô nguồn</strong>
+                <span style="color: var(--text-muted);">3 hộ nông dân • 18.650 kg</span>
+              </div>
+
+              <div class="source-batches-list">
+                <div class="source-batch-entry">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <div class="entry-index-badge">1</div>
+                    <div>
+                      <div style="font-weight: 700; font-size: 0.88rem;">LO-CFE-0926-033</div>
+                      <div style="font-size: 0.74rem; color: var(--text-secondary);">HTX Ea Tu • Buôn Ma Thuột</div>
+                    </div>
+                  </div>
+                  <strong style="font-size: 0.95rem;">6.200 kg</strong>
+                </div>
+
+                <div class="source-batch-entry">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <div class="entry-index-badge">2</div>
+                    <div>
+                      <div style="font-weight: 700; font-size: 0.88rem;">LO-CFE-0926-036</div>
+                      <div style="font-size: 0.74rem; color: var(--text-secondary);">Hộ Y Bih Niê • Cư M'gar</div>
+                    </div>
+                  </div>
+                  <strong style="font-size: 0.95rem;">5.950 kg</strong>
+                </div>
+
+                <div class="source-batch-entry">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <div class="entry-index-badge">3</div>
+                    <div>
+                      <div style="font-weight: 700; font-size: 0.88rem;">LO-CFE-0926-041</div>
+                      <div style="font-size: 0.74rem; color: var(--text-secondary);">Hộ Nguyễn Đức Bình • Krông Pắc</div>
+                    </div>
+                  </div>
+                  <strong style="font-size: 0.95rem;">6.500 kg</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kiểm tra tương thích chất lượng -->
+            <div class="quality-check-box">
+              <div class="quality-header-row">
+                <span>Kiểm tra tương thích chất lượng</span>
+                <span>ĐẠT 96%</span>
+              </div>
+              <div class="quality-items-grid">
+                <div>Giống: Robusta TR4</div>
+                <div>✓ Đồng nhất</div>
+                <div>Độ ẩm: 12,4–12,8%</div>
+                <div>✓ Trong ngưỡng</div>
+                <div>Tỷ lệ hạt đen: 0,6–0,9%</div>
+                <div>✓ Đạt xuất khẩu</div>
+                <div>Dư lượng: Không phát hiện</div>
+                <div>✓ An toàn</div>
+              </div>
+            </div>
+
+            <!-- Lô đích dự kiến -->
+            <div class="target-batch-banner">
+              <div>
+                <span class="kpi-label" style="color: #b45309;">LÔ ĐÍCH DỰ KIẾN</span>
+                <div style="font-size: 1.15rem; font-weight: 800; color: #78350f;">EXP-CFE-0926-006</div>
+                <div style="font-size: 0.78rem; color: #92400e;">Xuất khẩu Đức • Container lạnh 20 ft</div>
+              </div>
+              <div style="font-size: 1.5rem; font-weight: 800; color: #b45309;">18.650 kg</div>
+            </div>
+
+            <button class="btn-primary" style="align-self: flex-start; padding: 10px 24px;">Xác nhận gộp lô</button>
+          </div>
+        </div>
+
+        <!-- SƠ ĐỒ CHUỖI TRUY XUẤT NGUỒN GỐC SAU GỘP -->
+        <section class="traceability-flow-card">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2 class="card-title">Chuỗi truy xuất nguồn gốc sau gộp</h2>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Mọi lô nguồn được bảo toàn</span>
+          </div>
+
+          <div class="trace-flow-row">
+            <div class="trace-node">3 hộ nông dân</div>
+            <div class="trace-arrow">→</div>
+            <div class="trace-node">3 lô thu hoạch</div>
+            <div class="trace-arrow">→</div>
+            <div class="trace-node">Kiểm nghiệm chất lượng</div>
+            <div class="trace-arrow">→</div>
+            <div class="trace-node trace-node-highlight">Lô gộp EXP-CFE-0926-006</div>
+            <div class="trace-arrow">→</div>
+            <div class="trace-node">Xuất khẩu Hamburg</div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../services/api.js"></script>
+  <script src="gop-tach-lo.js"></script>
+</body>
+</html>

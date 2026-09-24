@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theo dõi Vận chuyển & Chuỗi lạnh | Nông Sản 360</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-wrapper">
+        <div class="brand-logo">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">Nông Sản 360</span>
+          <span class="brand-tagline">VẬN HÀNH CHUỖI</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="../index.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+            <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+          </svg>
+          <span>Tổng quan</span>
+        </a>
+
+        <a href="che-bien.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+          </svg>
+          <span>Lệnh chế biến</span>
+        </a>
+
+        <a href="gop-tach-lo.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 3 21 3 21 8"></polyline>
+            <line x1="4" y1="20" x2="21" y2="3"></line>
+            <polyline points="21 16 21 21 16 21"></polyline>
+            <line x1="15" y1="15" x2="21" y2="21"></line>
+            <line x1="4" y1="4" x2="9" y2="9"></line>
+          </svg>
+          <span>Gộp & Tách lô</span>
+        </a>
+
+        <a href="dieu-phoi.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Điều phối vận chuyển</span>
+        </a>
+
+        <a href="chuoi-lanh.html" class="nav-link active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path>
+          </svg>
+          <span>Theo dõi chuỗi lạnh</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="system-status-card">
+          <div class="status-indicator">
+            <span class="status-dot"></span>
+            <span>Hệ thống ổn định</span>
+          </div>
+          <div class="status-time">Đồng bộ lúc 10:42 • 24/7</div>
+        </div>
+
+        <a href="../login.html" class="sidebar-logout-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span>Đăng xuất</span>
+        </a>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="top-header">
+        <div class="header-title-group">
+          <h1>Theo dõi Vận chuyển & Chuỗi lạnh</h1>
+          <p>GPS trực tiếp và giám sát cảm biến IoT theo thời gian thực</p>
+        </div>
+
+        <div class="header-actions">
+          <div class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" class="search-input" placeholder="Tìm mã lô, chuyến xe...">
+          </div>
+
+          <button class="icon-button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="notification-badge-dot"></span>
+          </button>
+
+          <div class="user-profile-badge">
+            <div class="user-avatar-circle">NV</div>
+            <span class="user-profile-name">Nguyễn Văn Minh</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="page-content">
+        <!-- 4 KPI CARDS -->
+        <section class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-label">Chuyến đang hoạt động</span>
+              <div class="kpi-icon-pill kpi-icon-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="1" y="3" width="15" height="13"></rect>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                  <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                  <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value">18</div>
+            <div class="kpi-trend"><span>17 đúng tuyến • 1 chậm ETA</span></div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-label">Cảm biến trực tuyến</span>
+              <div class="kpi-icon-pill kpi-icon-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                  <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                  <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                  <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value">52 / 54</div>
+            <div class="kpi-trend"><span class="trend-alert">2 cảm biến mất tín hiệu</span></div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-label">Nhiệt độ trung bình</span>
+              <div class="kpi-icon-pill kpi-icon-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value">5,8°C</div>
+            <div class="kpi-trend"><span>Ngưỡng an toàn 2–8°C</span></div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-label">Cảnh báo đang mở</span>
+              <div class="kpi-icon-pill kpi-icon-red">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                  <line x1="12" y1="9" x2="12" y2="13"></line>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value">03</div>
+            <div class="kpi-trend"><span class="trend-alert">1 cảnh báo nhiệt độ cao</span></div>
+          </div>
+        </section>
+
+        <!-- MIDDLE SECTION: MAP & LIVE TRUCKS LIST -->
+        <section class="cold-chain-main-grid">
+          <!-- MAP CONTAINER (SVG Vector Representation of Vietnam Southern Corridor) -->
+          <div class="map-container-mock">
+            <!-- Top Map Status Overlay -->
+            <div style="position: absolute; top: 16px; left: 16px; display: flex; gap: 8px; z-index: 10;">
+              <span style="background: rgba(13, 56, 36, 0.9); color: #fff; padding: 4px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 700;">
+                ● 18 chuyến trực tiếp
+              </span>
+              <span style="background: rgba(220, 38, 38, 0.9); color: #fff; padding: 4px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 700;">
+                3 cảnh báo
+              </span>
+            </div>
+
+            <!-- Stylized Map Canvas SVG -->
+            <svg class="map-svg-canvas" viewBox="0 0 700 400" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <linearGradient id="seaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#b6d9c4" />
+                  <stop offset="100%" stop-color="#9fc8af" />
+                </linearGradient>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#seaGrad)" />
+              
+              <!-- Coastline / Land contours -->
+              <path d="M 50,0 Q 200,60 380,50 T 600,120 T 700,280 L 700,400 L 0,400 Z" fill="#d8ebe0" opacity="0.8" />
+              <path d="M 80,0 Q 220,80 340,90 T 520,200 T 620,380 L 0,400 Z" fill="#ebf5ee" />
+
+              <!-- Highways & Logistics Routes -->
+              <path d="M 450,110 L 370,220 L 250,260 L 160,330" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="6,4" />
+              <path d="M 370,220 L 480,260 L 530,340" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="6,4" />
+              <path d="M 320,150 L 370,220" fill="none" stroke="#107548" stroke-width="4" />
+
+              <!-- City Nodes -->
+              <circle cx="340" cy="110" r="5" fill="#475569" />
+              <text x="350" y="115" font-size="11" font-weight="700" fill="#334155">Buôn Ma Thuột</text>
+
+              <circle cx="300" cy="70" r="4" fill="#475569" />
+              <text x="310" y="74" font-size="10" fill="#64748b">Pleiku</text>
+
+              <circle cx="480" cy="140" r="5" fill="#475569" />
+              <text x="490" y="145" font-size="11" font-weight="700" fill="#334155">Nha Trang</text>
+
+              <circle cx="410" cy="170" r="4" fill="#475569" />
+              <text x="420" y="174" font-size="10" fill="#64748b">Đà Lạt</text>
+
+              <circle cx="210" cy="180" r="4" fill="#475569" />
+              <text x="210" y="195" font-size="10" fill="#64748b">Tây Ninh</text>
+
+              <circle cx="270" cy="240" r="6" fill="#0f172a" />
+              <text x="280" y="245" font-size="12" font-weight="800" fill="#0f172a">Ho Chi Minh City (HCMC)</text>
+
+              <circle cx="340" cy="230" r="4" fill="#475569" />
+              <text x="348" y="234" font-size="10" fill="#475569">Biên Hòa</text>
+
+              <circle cx="160" cy="330" r="5" fill="#475569" />
+              <text x="170" y="334" font-size="10" fill="#475569">Cần Thơ</text>
+
+              <circle cx="250" cy="290" r="4" fill="#475569" />
+              <text x="260" y="294" font-size="10" fill="#475569">Mỹ Tho</text>
+
+              <circle cx="380" cy="310" r="4" fill="#475569" />
+              <text x="390" y="314" font-size="10" fill="#475569">Vũng Tàu</text>
+            </svg>
+
+            <!-- TRUCK PIN 1 (Đang chạy đúng tuyến) -->
+            <div class="map-truck-pin" style="top: 32%; left: 47%;">
+              <div class="truck-marker-bubble">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <rect x="1" y="3" width="15" height="13"></rect>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon>
+                </svg>
+                <span>51D-482.36</span>
+              </div>
+            </div>
+
+            <!-- POPUP INFO TRUCK 1 -->
+            <div class="map-popup-card">
+              <div class="map-popup-header">
+                <span class="map-popup-plate">51D-482.36</span>
+                <span class="map-popup-status">ĐÚNG TUYẾN</span>
+              </div>
+              <div class="map-popup-route">Kho Đắk Lắk → Nhà máy Bình Dương</div>
+              <div class="map-popup-eta">
+                <span>Còn 126 km</span>
+                <span style="color: #059669;">ETA 11:45</span>
+              </div>
+            </div>
+
+            <!-- TRUCK PIN 2 (Blue) -->
+            <div class="map-truck-pin" style="top: 58%; left: 34%;">
+              <div class="truck-marker-bubble" style="background-color: #2563eb;">
+                <span>47C-218.09</span>
+              </div>
+            </div>
+
+            <!-- TRUCK PIN 3 (Orange) -->
+            <div class="map-truck-pin" style="top: 70%; left: 56%;">
+              <div class="truck-marker-bubble warning">
+                <span>66C-145.22</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT LIST: CHUYẾN ĐANG HOẠT ĐỘNG -->
+          <div class="content-card">
+            <div class="card-title-row">
+              <h2 class="card-title">Chuyến đang hoạt động</h2>
+              <span style="font-size: 0.78rem; color: var(--text-muted);">18 chuyến</span>
+            </div>
+
+            <div class="fleet-cards-list">
+              <!-- Xe 1 -->
+              <div class="fleet-item-card">
+                <div class="fleet-plate-row">
+                  <span style="font-weight: 700; font-size: 0.95rem;">51D-482.36</span>
+                  <span class="status-badge badge-green">ĐANG CHẠY</span>
+                </div>
+                <div style="font-size: 0.78rem; color: var(--text-secondary);">Cà phê • 12,5 tấn</div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 600;">
+                  <span style="color: #059669;">↘ 5,4°C • 68%</span>
+                  <span>ETA 11:45</span>
+                </div>
+              </div>
+
+              <!-- Xe 2 -->
+              <div class="fleet-item-card">
+                <div class="fleet-plate-row">
+                  <span style="font-weight: 700; font-size: 0.95rem;">47C-218.09</span>
+                  <span class="status-badge badge-green">ĐANG CHẠY</span>
+                </div>
+                <div style="font-size: 0.78rem; color: var(--text-secondary);">Xoài Cát Chu • 8,2 tấn</div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 600;">
+                  <span style="color: #059669;">↘ 7,8°C • 72%</span>
+                  <span>ETA 11:20</span>
+                </div>
+              </div>
+
+              <!-- Xe 3: VƯỢT NGƯỠNG -->
+              <div class="fleet-item-card" style="border-color: #fca5a5; background-color: #fffafb;">
+                <div class="fleet-plate-row">
+                  <span style="font-weight: 700; font-size: 0.95rem;">66C-145.22</span>
+                  <span class="status-badge badge-red">VƯỢT NGƯỠNG</span>
+                </div>
+                <div style="font-size: 0.78rem; color: var(--text-secondary);">Thanh long • 9,6 tấn</div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 600;">
+                  <span style="color: #dc2626;">↗ 9,3°C • 76%</span>
+                  <span>ETA 12:05</span>
+                </div>
+              </div>
+
+              <!-- Xe 4 -->
+              <div class="fleet-item-card">
+                <div class="fleet-plate-row">
+                  <span style="font-weight: 700; font-size: 0.95rem;">51C-907.15</span>
+                  <span class="status-badge badge-green">ĐANG CHẠY</span>
+                </div>
+                <div style="font-size: 0.78rem; color: var(--text-secondary);">Sầu riêng • 6,4 tấn</div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 600;">
+                  <span style="color: #059669;">↘ 4,9°C • 65%</span>
+                  <span>ETA 13:10</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BOTTOM SECTION: REALTIME SENSOR CHART & ALERTS -->
+        <section class="cold-chain-main-grid">
+          <!-- CHART BIỂU ĐỒ NHIỆT ĐỘ & ĐỘ ẨM -->
+          <div class="content-card">
+            <div class="card-title-row">
+              <div>
+                <h2 class="card-title">Nhiệt độ & độ ẩm thời gian thực</h2>
+                <span style="font-size: 0.78rem; color: var(--text-muted);">Xe 51D-482.36 • Cập nhật mỗi 30 giây</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <span class="status-badge badge-green">● IoT kết nối</span>
+                <span style="font-weight: 700; font-size: 0.92rem;">5,4°C • 68%</span>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="status-badge badge-green" style="font-size: 0.74rem;">Ngưỡng 2–8°C</span>
+            </div>
+
+            <!-- Pure CSS Bar Chart -->
+            <div class="hourly-bar-chart">
+              <div class="chart-bar-col" style="height: 45%;" title="5.2°C"></div>
+              <div class="chart-bar-col" style="height: 55%;" title="5.6°C"></div>
+              <div class="chart-bar-col" style="height: 50%;" title="5.4°C"></div>
+              <div class="chart-bar-col" style="height: 60%;" title="5.8°C"></div>
+              <div class="chart-bar-col" style="height: 52%;" title="5.3°C"></div>
+              <div class="chart-bar-col" style="height: 65%;" title="6.0°C"></div>
+              <div class="chart-bar-col" style="height: 70%;" title="6.2°C"></div>
+              <div class="chart-bar-col" style="height: 62%;" title="5.9°C"></div>
+              <div class="chart-bar-col" style="height: 75%;" title="6.5°C"></div>
+              <div class="chart-bar-col chart-bar-alert" style="height: 88%;" title="Cảnh báo nhiệt: 7.9°C"></div>
+              <div class="chart-bar-col" style="height: 72%;" title="6.3°C"></div>
+              <div class="chart-bar-col" style="height: 68%;" title="6.1°C"></div>
+              <div class="chart-bar-col" style="height: 65%;" title="5.9°C"></div>
+              <div class="chart-bar-col" style="height: 78%;" title="6.6°C"></div>
+              <div class="chart-bar-col" style="height: 70%;" title="6.2°C"></div>
+              <div class="chart-bar-col" style="height: 58%;" title="5.6°C"></div>
+              <div class="chart-bar-col" style="height: 54%;" title="5.4°C"></div>
+            </div>
+
+            <div class="time-axis-labels">
+              <span>08:00</span>
+              <span>09:00</span>
+              <span>10:00</span>
+              <span>10:42</span>
+            </div>
+          </div>
+
+          <!-- RIGHT ALERTS: CẢNH BÁO CHUỖI LẠNH -->
+          <div class="content-card">
+            <div class="card-title-row">
+              <h2 class="card-title">Cảnh báo chuỗi lạnh</h2>
+              <span style="font-size: 0.78rem; color: var(--text-muted);">3 đang mở</span>
+            </div>
+
+            <div class="alert-items-list">
+              <!-- Alert 1 -->
+              <div class="alert-item-card alert-red">
+                <div class="alert-left">
+                  <div class="alert-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="alert-title-main">Nhiệt độ vượt ngưỡng</div>
+                    <div class="alert-title-sub">Xe 66C-145.22 • 9,3°C > 8°C</div>
+                    <div style="font-size: 0.72rem; color: #dc2626; margin-top: 2px;">10:38 • kéo dài 4 phút</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Alert 2 -->
+              <div class="alert-item-card alert-yellow">
+                <div class="alert-left">
+                  <div class="alert-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="12" y1="9" x2="12" y2="13"></line>
+                      <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="alert-title-main">Mất tín hiệu cảm biến</div>
+                    <div class="alert-title-sub">Cảm biến HUM-04 • Xe 47C-201.88</div>
+                    <div style="font-size: 0.72rem; color: #b45309; margin-top: 2px;">10:31 • chờ kết nối lại</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Alert 3 -->
+              <div class="alert-item-card alert-yellow">
+                <div class="alert-left">
+                  <div class="alert-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="alert-title-main">ETA chậm 22 phút</div>
+                    <div class="alert-title-sub">Xe 51C-884.02 • QL14 ùn tắc</div>
+                    <div style="font-size: 0.72rem; color: #b45309; margin-top: 2px;">10:22 • đã báo điều phối</div>
+                  </div>
+                </div>
+              </div>
+
+              <a href="#" class="btn-secondary" style="text-align: center; justify-content: center; margin-top: 8px;">
+                Xem tất cả cảnh báo
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>
